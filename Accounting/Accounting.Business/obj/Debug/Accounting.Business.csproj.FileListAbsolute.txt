@@ -1,0 +1,6 @@
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.Business.dll
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.Business.pdb
+D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.csproj.AssemblyReference.cache
+D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.csproj.CoreCompileInputs.cache
+D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.dll
+D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.pdb
