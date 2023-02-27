@@ -1,5 +1,0 @@
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.AssemblyReference.cache
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.SuggestedBindingRedirects.cache
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Properties.Resources.resources
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.GenerateResource.cache
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.csproj.CoreCompileInputs.cache

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C00FC4FB-D457-4CE0-877D-AEC0B0FCA34B}</ProjectGuid>
+    <ProjectGuid>{715AFD6F-0890-468F-A1A1-93FDB996EB66}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Accounting.App</RootNamespace>
     <AssemblyName>Accounting.App</AssemblyName>
@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
