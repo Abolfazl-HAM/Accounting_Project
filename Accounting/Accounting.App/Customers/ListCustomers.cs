@@ -1,4 +1,5 @@
-﻿using Accounting.DataLayer.Context;
+﻿using Accounting.App.Customers;
+using Accounting.DataLayer.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,12 @@ namespace Accounting.App
             {
                 RtlMessageBox.Show("لطفا شخص مورد نظر را انتخاب کنید");
             }
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            frmAddOrEditCustomer frmAddOrEdit = new frmAddOrEditCustomer();
+            frmAddOrEdit.ShowDialog();
         }
     }
 }
