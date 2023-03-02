@@ -16,5 +16,13 @@ namespace Accounting.App
         {
             InitializeComponent();
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            ListCustomers frmListCustomers = new ListCustomers();
+            frmListCustomers.BindGrid();
+            frmListCustomers.ShowDialog();
+           
+        }
     }
 }
