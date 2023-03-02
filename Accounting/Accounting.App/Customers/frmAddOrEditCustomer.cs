@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValidationComponents;
 
 namespace Accounting.App.Customers
 {
@@ -23,6 +24,14 @@ namespace Accounting.App.Customers
             if(openFile.ShowDialog() == DialogResult.OK)
             {
                 pcCustomer.ImageLocation=openFile.FileName;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (BaseValidator.IsFormValid(this.components))
+            {
+               
             }
         }
     }
