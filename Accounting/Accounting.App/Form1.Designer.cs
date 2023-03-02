@@ -69,14 +69,14 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Image = global::Accounting.App.Resource2._1371476468_preferences_contact_list;
+            this.btnCustomer.Image = global::Accounting.App.Resource1._1371476468_preferences_contact_list;
             this.btnCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(71, 59);
             this.btnCustomer.Text = "طرف حساب";
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click_1);
             // 
             // Form1
             // 

@@ -73,6 +73,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resource2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,8 +132,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource2.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resource2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -145,60 +155,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1370791030_credit-card.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371475930_filenew.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371475973_document_edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476007_Close_Box_Red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476049_fork3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476070_self1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476120_fingerprint_reader.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476143_deliverables.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476193_printers-&amp;-Faxes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476276_Print.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476342_Refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476368_Synchronize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476394_refresh red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476468_preferences-contact-list.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1371476499_todo-list.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\list2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\servicesCosts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Users.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Accounting.DataLayer\Accounting.DataLayer.csproj">
       <Project>{b18217a3-514e-477b-8dbd-75c32ad5208d}</Project>
       <Name>Accounting.DataLayer</Name>
@@ -209,10 +165,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1370791030_credit-card.png" />
+    <None Include="Resources\1371475930_filenew.png" />
+    <None Include="Resources\1371475973_document_edit.png" />
+    <None Include="Resources\1371476007_Close_Box_Red.png" />
+    <None Include="Resources\1371476049_fork3.png" />
+    <None Include="Resources\1371476070_self1.png" />
+    <None Include="Resources\1371476120_fingerprint_reader.png" />
+    <None Include="Resources\1371476143_deliverables.png" />
+    <None Include="Resources\1371476193_printers-&amp;-Faxes.png" />
+    <None Include="Resources\1371476276_Print.png" />
+    <None Include="Resources\1371476342_Refresh.png" />
+    <None Include="Resources\1371476368_Synchronize.png" />
+    <None Include="Resources\1371476394_refresh red.png" />
+    <None Include="Resources\1371476468_preferences-contact-list.png" />
+    <None Include="Resources\1371476499_todo-list.png" />
+    <None Include="Resources\list2.png" />
+    <None Include="Resources\servicesCosts.png" />
+    <None Include="Resources\Users.png" />
     <None Include="Resources\80-800194_transparent-users-icon-png-flat-user-icon-png.png" />
+    <Content Include="WinValidator\New Text Document.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WinValidator\New Text Document.txt" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

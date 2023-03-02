@@ -1,4 +1,4 @@
-﻿using Accounting.App.Customers;
+﻿
 using Accounting.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -19,12 +19,7 @@ namespace Accounting.App
             InitializeComponent();
         }
 
-        private void btn_Click(object sender, EventArgs e)
-        {
-            BindGrid();
-            txtFilterCustomer.Text = "";
-            
-        }
+      
         public void BindGrid()
         {
             using (UnitOfWork db = new UnitOfWork())
@@ -44,12 +39,25 @@ namespace Accounting.App
             }
         }
 
-        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+       
+
+       
+
+        private void btnAddCustomer_Click_1(object sender, EventArgs e)
         {
-            int CustomerId=int.Parse( dgCustomers.CurrentRow.Cells[0].Value.ToString());
+            frmAddOrEditCustomer frmAddOrEdit = new frmAddOrEditCustomer();
+            if (frmAddOrEdit.ShowDialog() == DialogResult.OK)
+            {
+                BindGrid();
+            }
+        }
+
+        private void btnDeleteCustomer_Click_1(object sender, EventArgs e)
+        {
+            int CustomerId = int.Parse(dgCustomers.CurrentRow.Cells[0].Value.ToString());
             if (CustomerId != 0)
             {
-                
+
                 using (UnitOfWork db = new UnitOfWork())
                 {
                     string name = dgCustomers.CurrentRow.Cells[1].Value.ToString();
@@ -59,7 +67,7 @@ namespace Accounting.App
                         db.Save();
                         BindGrid();
                     }
-                   
+
                 }
             }
             else
@@ -68,10 +76,10 @@ namespace Accounting.App
             }
         }
 
-        private void btnAddCustomer_Click(object sender, EventArgs e)
+        private void btnRefreshCustomer_Click(object sender, EventArgs e)
         {
-            frmAddOrEditCustomer frmAddOrEdit = new frmAddOrEditCustomer();
-            frmAddOrEdit.ShowDialog();
+            BindGrid();
+            txtFilterCustomer.Text = "";
         }
     }
 }

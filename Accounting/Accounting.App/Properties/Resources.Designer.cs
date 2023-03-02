@@ -59,15 +59,5 @@ namespace Accounting.App.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _80_800194_transparent_users_icon_png_flat_user_icon_png {
-            get {
-                object obj = ResourceManager.GetObject("80-800194_transparent-users-icon-png-flat-user-icon-png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

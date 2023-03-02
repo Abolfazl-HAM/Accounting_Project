@@ -21,4 +21,5 @@ D:\AccountingProject\Accounting\Accounting.App\bin\Debug\EntityFramework.SqlServ
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\EntityFramework.SqlServer.xml
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Utility.dll
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Utility.pdb
-D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Customers.frmAddOrEditCustomer.resources
+D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAddOrEditCustomer.resources
+D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Resource1.resources
