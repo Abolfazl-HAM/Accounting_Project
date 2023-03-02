@@ -40,9 +40,9 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pcCustomer = new System.Windows.Forms.PictureBox();
             this.btnSelectPhoto = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pcCustomer = new System.Windows.Forms.PictureBox();
             this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.groupBox1.SuspendLayout();
@@ -143,6 +143,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "تصویر";
             // 
+            // pcCustomer
+            // 
+            this.pcCustomer.Image = global::Accounting.App.Resource1._80_800194_transparent_users_icon_png_flat_user_icon_png;
+            this.pcCustomer.Location = new System.Drawing.Point(0, 21);
+            this.pcCustomer.Name = "pcCustomer";
+            this.pcCustomer.Size = new System.Drawing.Size(207, 251);
+            this.pcCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcCustomer.TabIndex = 2;
+            this.pcCustomer.TabStop = false;
+            // 
             // btnSelectPhoto
             // 
             this.btnSelectPhoto.Location = new System.Drawing.Point(6, 278);
@@ -162,16 +172,6 @@
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // pcCustomer
-            // 
-            this.pcCustomer.Image = global::Accounting.App.Resource1._80_800194_transparent_users_icon_png_flat_user_icon_png;
-            this.pcCustomer.Location = new System.Drawing.Point(0, 21);
-            this.pcCustomer.Name = "pcCustomer";
-            this.pcCustomer.Size = new System.Drawing.Size(207, 251);
-            this.pcCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcCustomer.TabIndex = 2;
-            this.pcCustomer.TabStop = false;
             // 
             // requiredFieldValidator1
             // 
@@ -201,7 +201,8 @@
             this.Name = "frmAddOrEditCustomer";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAddOrEditCustomer";
+            this.Text = "افزودن شخص جدید";
+            this.Load += new System.EventHandler(this.frmAddOrEditCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

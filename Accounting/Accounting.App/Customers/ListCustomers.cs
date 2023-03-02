@@ -81,5 +81,20 @@ namespace Accounting.App
             BindGrid();
             txtFilterCustomer.Text = "";
         }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            if (dgCustomers.CurrentRow != null)
+            {
+                int CustomerId = int.Parse(dgCustomers.CurrentRow.Cells[0].Value.ToString());
+                frmAddOrEditCustomer addOrEdit = new frmAddOrEditCustomer();
+                addOrEdit.customerID = CustomerId;
+                if (addOrEdit.ShowDialog() == DialogResult.OK)
+                {
+                    BindGrid();
+                }
+            }
+           
+        }
     }
 }
