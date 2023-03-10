@@ -36,10 +36,6 @@
   <EntityType Name="Accounting">
     <Key>
       <PropertyRef Name="ID" />
-      <PropertyRef Name="CustomerID" />
-      <PropertyRef Name="TypeID" />
-      <PropertyRef Name="Amount" />
-      <PropertyRef Name="Date" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CustomerID" Type="Int32" Nullable="false" />

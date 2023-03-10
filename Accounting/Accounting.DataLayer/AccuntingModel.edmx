@@ -5,15 +5,9 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Accounting_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Accounting_DB.dbo.Accounting' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Accounting">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="CustomerID" />
-            <PropertyRef Name="TypeID" />
-            <PropertyRef Name="Amount" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
@@ -65,18 +59,9 @@ warning 6002: The table/view 'Accounting_DB.dbo.Accounting' does not have a prim
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Accounting_DBModelStoreContainer">
+          <EntitySet Name="Accounting" EntityType="Self.Accounting" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccountingTypes" EntityType="Self.AccountingTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Accounting" EntityType="Self.Accounting" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Accounting].[ID] AS [ID], 
-    [Accounting].[CustomerID] AS [CustomerID], 
-    [Accounting].[TypeID] AS [TypeID], 
-    [Accounting].[Amount] AS [Amount], 
-    [Accounting].[Description] AS [Description], 
-    [Accounting].[Date] AS [Date]
-    FROM [dbo].[Accounting] AS [Accounting]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Accounting_AccountingTypes" Association="Self.FK_Accounting_AccountingTypes">
             <End Role="AccountingTypes" EntitySet="AccountingTypes" />
             <End Role="Accounting" EntitySet="Accounting" />
@@ -114,7 +99,7 @@ warning 6002: The table/view 'Accounting_DB.dbo.Accounting' does not have a prim
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Accounting" EntitySet="Accounting" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="AccountingTypes">
           <Key>
             <PropertyRef Name="TypeID" />
@@ -126,10 +111,6 @@ warning 6002: The table/view 'Accounting_DB.dbo.Accounting' does not have a prim
         <EntityType Name="Accounting">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="CustomerID" />
-            <PropertyRef Name="TypeID" />
-            <PropertyRef Name="Amount" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
@@ -164,7 +145,7 @@ warning 6002: The table/view 'Accounting_DB.dbo.Accounting' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
