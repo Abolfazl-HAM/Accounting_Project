@@ -21,7 +21,7 @@ namespace Accounting.DataLayer
         public string Description { get; set; }
         public System.DateTime Date { get; set; }
     
-        public virtual AccountingType AccountingType { get; set; }
-        public virtual Customer Customer { get; set; }
+        public virtual AccountingTypes AccountingTypes { get; set; }
+        public virtual Customers Customers { get; set; }
     }
 }
