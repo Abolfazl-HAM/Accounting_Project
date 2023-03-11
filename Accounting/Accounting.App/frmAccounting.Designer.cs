@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccounting));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
@@ -40,8 +42,10 @@
             this.txtAmount = new System.Windows.Forms.NumericUpDown();
             this.rbReciv = new System.Windows.Forms.RadioButton();
             this.rbPay = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.rangeValidator1 = new ValidationComponents.RangeValidator(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
@@ -81,6 +85,7 @@
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.Size = new System.Drawing.Size(196, 270);
             this.dgvCustomers.TabIndex = 1;
+            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
             // label1
             // 
@@ -122,6 +127,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(236, 39);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(268, 26);
             this.txtName.TabIndex = 2;
             // 
@@ -136,6 +142,11 @@
             // txtAmount
             // 
             this.txtAmount.Location = new System.Drawing.Point(236, 107);
+            this.txtAmount.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(268, 26);
             this.txtAmount.TabIndex = 5;
@@ -162,14 +173,15 @@
             this.rbPay.Text = "پرداخت";
             this.rbPay.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(429, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "ثبت";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(429, 326);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "ثبت";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // name
             // 
@@ -178,12 +190,29 @@
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
+            // requiredFieldValidator1
+            // 
+            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator1.ControlToValidate = this.txtName;
+            this.requiredFieldValidator1.ErrorMessage = "لطفا نام طرف حساب را از لیست انتخاب کنید";
+            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
+            // 
+            // rangeValidator1
+            // 
+            this.rangeValidator1.CancelFocusChangeWhenInvalid = false;
+            this.rangeValidator1.ControlToValidate = this.txtAmount;
+            this.rangeValidator1.ErrorMessage = "لطفا مبلغ را وارد کنید";
+            this.rangeValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("rangeValidator1.Icon")));
+            this.rangeValidator1.MaximumValue = "99999999";
+            this.rangeValidator1.MinimumValue = "1";
+            this.rangeValidator1.Type = ValidationComponents.ValidationDataType.Integer;
+            // 
             // frmAccounting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.rbPay);
             this.Controls.Add(this.rbReciv);
             this.Controls.Add(this.txtAmount);
@@ -224,7 +253,9 @@
         private System.Windows.Forms.NumericUpDown txtAmount;
         private System.Windows.Forms.RadioButton rbReciv;
         private System.Windows.Forms.RadioButton rbPay;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator1;
+        private ValidationComponents.RangeValidator rangeValidator1;
     }
 }
