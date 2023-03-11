@@ -10,3 +10,5 @@ D:\AccountingProject\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLa
 D:\AccountingProject\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csproj.CopyComplete
 D:\AccountingProject\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.dll
 D:\AccountingProject\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.pdb
+D:\AccountingProject\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModels.dll
+D:\AccountingProject\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModels.pdb

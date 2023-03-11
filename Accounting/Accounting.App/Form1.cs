@@ -25,5 +25,12 @@ namespace Accounting.App
             frmListCustomers.BindGrid();
             frmListCustomers.ShowDialog();
         }
+
+        private void btnNewAccounting_Click(object sender, EventArgs e)
+        {
+            frmAccounting frmAccounting = new frmAccounting();
+            
+            frmAccounting.ShowDialog();
+        }
     }
 }

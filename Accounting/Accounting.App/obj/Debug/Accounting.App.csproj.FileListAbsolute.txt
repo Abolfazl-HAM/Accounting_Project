@@ -23,3 +23,6 @@ D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Utility.dll
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Utility.pdb
 D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAddOrEditCustomer.resources
 D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Resource1.resources
+D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAccounting.resources
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.pdb
