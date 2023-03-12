@@ -26,3 +26,4 @@ D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Resource
 D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.frmAccounting.resources
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.dll
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.pdb
+D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Accounting.frmReport.resources
