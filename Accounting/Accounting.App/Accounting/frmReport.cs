@@ -42,23 +42,41 @@ namespace Accounting.App.Accounting
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int accountingId = int.Parse(dgReport.CurrentRow.Cells[0].Value.ToString());
-            if(RtlMessageBox.Show("آیا از حذف این شخص مطمئن هستید","هشدار",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (dgReport.CurrentRow != null)
             {
-                using (UnitOfWork db = new UnitOfWork())
+                int accountingId = int.Parse(dgReport.CurrentRow.Cells[0].Value.ToString());
+                if (RtlMessageBox.Show("آیا از حذف این شخص مطمئن هستید", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    db.AccountingRepository.Delete(accountingId);
-                    db.Save();
-                    Filter();
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+                        db.AccountingRepository.Delete(accountingId);
+                        db.Save();
+                        Filter();
+                    }
                 }
             }
-           
+
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             Filter();
         }
-    }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgReport.CurrentRow != null)
+            {
+                int accountingId = int.Parse(dgReport.CurrentRow.Cells[0].Value.ToString());
+                frmAccounting frmNew =new frmAccounting();
+                frmNew.AccountID = accountingId;
+                if (frmNew.ShowDialog() == DialogResult.OK)
+                {
+                    Filter();
+                }
+
+            }
+        }
+    }
 }

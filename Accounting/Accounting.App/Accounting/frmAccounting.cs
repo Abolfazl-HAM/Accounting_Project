@@ -16,7 +16,8 @@ namespace Accounting.App
 {
     public partial class frmAccounting : Form
     {
-        UnitOfWork db = new UnitOfWork();
+        private UnitOfWork db;
+        public int AccountID = 0;
         public frmAccounting()
         {
             InitializeComponent();
@@ -24,8 +25,27 @@ namespace Accounting.App
 
         private void frmAccounting_Load(object sender, EventArgs e)
         {
+            db = new UnitOfWork();
             dgvCustomers.AutoGenerateColumns = false;
             dgvCustomers.DataSource = db.CustomerRepository.GetNameCustomers();
+            if (AccountID != 0)
+            {
+                var account = db.AccountingRepository.GetById(AccountID);
+                txtAmount.Text = account.Amount.ToString();
+                txtDescription.Text = account.Description;
+                txtName.Text=db.CustomerRepository.GetCustomerNameById(account.CustomerID);
+                if (AccountID == 1)
+                {
+                    rbPay.Checked = true;
+                }
+                else 
+                {
+                    rbReciv.Checked = true;
+                }
+                this.Text = "ویرایش";
+                btnSave.Text = "ویرایش";
+                db.Dispose();
+            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
@@ -41,6 +61,7 @@ namespace Accounting.App
 
         private void button1_Click(object sender, EventArgs e)
         {
+            db = new UnitOfWork();
             if (BaseValidator.IsFormValid(this.components))
             {
                 if (rbPay.Checked || rbReciv.Checked)
@@ -53,9 +74,19 @@ namespace Accounting.App
                         Date = DateTime.Now,
                         Description = txtDescription.Text
                     };
-                    db.AccountingRepository.Insert(accounting);
+                    if (AccountID == 0)
+                    {
+                        db.AccountingRepository.Insert(accounting);
+                    }
+                    else
+                    {
+                        accounting.ID = AccountID;
+                        db.AccountingRepository.Update(accounting);
+                    }
                     db.Save();
+                    
                     DialogResult = DialogResult.OK;
+                    db.Dispose();
                 }
                 else
                 {
