@@ -13,6 +13,8 @@ namespace Accounting.DataLayer.Repositories
 
         List<ListCustomerViwModel> GetNameCustomers(string filter = "");
 
+        string GetCustomerNameById(int customerId);
+
         int GetCustomerIdByName(string name);
 
         List<Customers> GetAllCustomers();

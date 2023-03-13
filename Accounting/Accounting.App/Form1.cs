@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Accounting.App.Accounting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,22 @@ namespace Accounting.App
             frmAccounting frmAccounting = new frmAccounting();
             
             frmAccounting.ShowDialog();
+        }
+
+        private void btnReportPay_Click(object sender, EventArgs e)
+        {
+            frmReport report = new frmReport();
+            report.TypeId = 2;
+            report.Text = "گزارش پرداختی ها";
+            report.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmReport report = new frmReport();
+            report.TypeId = 1;
+            report.Text = "گزارش دریافتی ها";
+            report.ShowDialog();
         }
     }
 }

@@ -43,6 +43,11 @@ namespace Accounting.DataLayer.Services
             }).ToList();
         }
 
+        public string GetCustomerNameById(int customerId)
+        {
+            return db.Customers.Find(customerId).FullName;
+        }
+
         public int GetCustomerIdByName(string name)
         {
             return db.Customers.First(c=> c.FullName == name).CustomerID;
@@ -118,6 +123,6 @@ namespace Accounting.DataLayer.Services
             }
         }
 
-        
+       
     }
 }

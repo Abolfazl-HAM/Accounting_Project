@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnPrint = new System.Windows.Forms.ToolStripButton();
-            this.btnReset = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnReset = new System.Windows.Forms.ToolStripButton();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbCustomer = new System.Windows.Forms.ComboBox();
-            this.txtFromDate = new System.Windows.Forms.MaskedTextBox();
-            this.txtToDate = new System.Windows.Forms.MaskedTextBox();
             this.btnFilter = new System.Windows.Forms.Button();
+            this.txtToDate = new System.Windows.Forms.MaskedTextBox();
+            this.txtFromDate = new System.Windows.Forms.MaskedTextBox();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgReport = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,26 +65,15 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnPrint
+            // btnEdit
             // 
-            this.btnPrint.Image = global::Accounting.App.Resource1._1371476276_Print;
-            this.btnPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(44, 59);
-            this.btnPrint.Text = "چاپ";
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPrint.ToolTipText = "طرف حساب";
-            // 
-            // btnReset
-            // 
-            this.btnReset.Image = global::Accounting.App.Resource1._1371476342_Refresh;
-            this.btnReset.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(60, 59);
-            this.btnReset.Text = "بروزرسانی";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEdit.Image = global::Accounting.App.Resource1._1371475973_document_edit;
+            this.btnEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(47, 59);
+            this.btnEdit.Text = "ویرایش";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnDelete
             // 
@@ -95,16 +84,29 @@
             this.btnDelete.Size = new System.Drawing.Size(44, 59);
             this.btnDelete.Text = "حذف";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnEdit
+            // btnReset
             // 
-            this.btnEdit.Image = global::Accounting.App.Resource1._1371475973_document_edit;
-            this.btnEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(47, 59);
-            this.btnEdit.Text = "ویرایش";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReset.Image = global::Accounting.App.Resource1._1371476342_Refresh;
+            this.btnReset.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(60, 59);
+            this.btnReset.Text = "بروزرسانی";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::Accounting.App.Resource1._1371476276_Print;
+            this.btnPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(44, 59);
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPrint.ToolTipText = "طرف حساب";
             // 
             // groupBox1
             // 
@@ -120,51 +122,17 @@
             this.groupBox1.Size = new System.Drawing.Size(660, 85);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "جستجو";
             // 
-            // label1
+            // btnFilter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(580, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "طرف حساب :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(390, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "از تاریخ :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "تا تاریخ :";
-            // 
-            // cbCustomer
-            // 
-            this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(452, 34);
-            this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(130, 27);
-            this.cbCustomer.TabIndex = 3;
-            // 
-            // txtFromDate
-            // 
-            this.txtFromDate.Location = new System.Drawing.Point(280, 34);
-            this.txtFromDate.Mask = "0000/00/00";
-            this.txtFromDate.Name = "txtFromDate";
-            this.txtFromDate.Size = new System.Drawing.Size(113, 26);
-            this.txtFromDate.TabIndex = 4;
-            this.txtFromDate.ValidatingType = typeof(System.DateTime);
+            this.btnFilter.Location = new System.Drawing.Point(18, 35);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(75, 26);
+            this.btnFilter.TabIndex = 6;
+            this.btnFilter.Text = "انجام ";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtToDate
             // 
@@ -175,14 +143,49 @@
             this.txtToDate.TabIndex = 5;
             this.txtToDate.ValidatingType = typeof(System.DateTime);
             // 
-            // btnFilter
+            // txtFromDate
             // 
-            this.btnFilter.Location = new System.Drawing.Point(18, 35);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(75, 26);
-            this.btnFilter.TabIndex = 6;
-            this.btnFilter.Text = "انجام ";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.txtFromDate.Location = new System.Drawing.Point(280, 34);
+            this.txtFromDate.Mask = "0000/00/00";
+            this.txtFromDate.Name = "txtFromDate";
+            this.txtFromDate.Size = new System.Drawing.Size(113, 26);
+            this.txtFromDate.TabIndex = 4;
+            this.txtFromDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // cbCustomer
+            // 
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Location = new System.Drawing.Point(452, 34);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(130, 27);
+            this.cbCustomer.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(222, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "تا تاریخ :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(390, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "از تاریخ :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(580, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "طرف حساب :";
             // 
             // dgReport
             // 
@@ -248,7 +251,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReport";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
