@@ -124,6 +124,9 @@
   <data name="servicesCosts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\servicesCosts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="thoughtful_businessman_sitting_with_open_laptop_computer_looking_worried_while_thinking_about_planning_top_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\thoughtful-businessman-sitting-with-open-laptop-computer-looking-worried-while-thinking-about-planning-top-view.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Users" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,5 +177,8 @@
   </data>
   <data name="_80_800194_transparent_users_icon_png_flat_user_icon_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\80-800194_transparent-users-icon-png-flat-user-icon-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_9176032_6573" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\9176032_6573.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

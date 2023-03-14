@@ -75,6 +75,9 @@
     <Compile Include="Customers.cs">
       <DependentUpon>AccuntingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <DependentUpon>AccuntingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Services\CustomerRepository.cs" />

@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="Accounting_DBModel.Accounting" Width="1.5" PointX="5.5" PointY="2.125" />
         <AssociationConnector Association="Accounting_DBModel.FK_Accounting_AccountingTypes" />
         <AssociationConnector Association="Accounting_DBModel.FK_Accounting_Customers" />
+        <EntityTypeShape EntityType="Accounting_DBModel.Login" Width="1.5" PointX="0.75" PointY="3.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

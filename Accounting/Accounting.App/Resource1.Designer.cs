@@ -223,6 +223,16 @@ namespace Accounting.App {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9176032_6573 {
+            get {
+                object obj = ResourceManager.GetObject("_9176032_6573", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list2 {
             get {
                 object obj = ResourceManager.GetObject("list2", resourceCulture);
@@ -236,6 +246,17 @@ namespace Accounting.App {
         internal static System.Drawing.Bitmap servicesCosts {
             get {
                 object obj = ResourceManager.GetObject("servicesCosts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thoughtful_businessman_sitting_with_open_laptop_computer_looking_worried_while_thinking_about_planning_top_view {
+            get {
+                object obj = ResourceManager.GetObject("thoughtful_businessman_sitting_with_open_laptop_computer_looking_worried_while_th" +
+                        "inking_about_planning_top_view", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

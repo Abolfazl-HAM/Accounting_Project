@@ -17,6 +17,9 @@ namespace Accounting.DataLayer.Context
 
         private GenericRepository<Accounting> _accountingRepository;
 
+        private GenericRepository<Login> _loginRepository;
+
+
 
         public ICustomerRepository CustomerRepository
         {
@@ -41,6 +44,23 @@ namespace Accounting.DataLayer.Context
                 return _accountingRepository;
             }
         }
+
+        public GenericRepository<Login> LoginRepository
+        {
+            get
+            {
+                if (_loginRepository == null)
+                {
+                    return _loginRepository = new GenericRepository<Login>(db);
+                }
+
+                return _loginRepository;
+            }
+            }
+            
+        
+
+
 
         public void Save()
         {
