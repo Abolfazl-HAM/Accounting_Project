@@ -1,5 +1,6 @@
 ﻿using Accounting.DataLayer.Context;
 using Accounting.Utility.Convertor;
+using Accounting.ViewModels.Customers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,37 @@ namespace Accounting.App.Accounting
         {
             using (UnitOfWork db = new UnitOfWork())
             {
-                var result = db.AccountingRepository.Get(a => a.TypeID == TypeId);
+                List<DataLayer.Accounting> result = new List<DataLayer.Accounting>();
+                DateTime? startDate;
+                DateTime? endDate;
+
+               
+                if ((int)cbCustomer.SelectedValue != 0)
+                {
+                    int customerId = int.Parse(cbCustomer.SelectedValue.ToString());
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeId && a.CustomerID == customerId));
+                }
+
+                else
+                {
+                    result.AddRange(db.AccountingRepository.Get(a => a.TypeID == TypeId));
+                }
+
+
+                if (txtFromDate.Text != "    /  /")
+                {
+                    startDate = Convert.ToDateTime(txtFromDate.Text);
+                    startDate = DateConvertor.ToMiladi(startDate.Value);
+                    result = result.Where(d => d.Date >= startDate.Value).ToList();
+                }
+
+                if (txtToDate.Text != "    /  /")
+                {
+                    endDate = Convert.ToDateTime(txtToDate.Text);
+                    endDate = DateConvertor.ToMiladi(endDate.Value);
+                    result = result.Where(d => d.Date <= endDate.Value).ToList();
+                }
+
                 dgReport.Rows.Clear();
                 foreach (var accounting in result)
                 {
@@ -76,6 +107,24 @@ namespace Accounting.App.Accounting
                     Filter();
                 }
 
+            }
+        }
+
+        private void frmReport_Load(object sender, EventArgs e)
+        {
+            using (UnitOfWork db = new UnitOfWork())
+            {
+                List<ListCustomerViwModel> list = new List<ListCustomerViwModel>();
+                list.Add(new ListCustomerViwModel()
+                {
+                    CustomerID = 0,
+                    FullName="لطفا انتخاب کنید"
+                });
+                list.AddRange(db.CustomerRepository.GetNameCustomers());
+                cbCustomer.DataSource = list;
+                cbCustomer.DisplayMember = "FullName";
+                cbCustomer.ValueMember = "CustomerID";
+                
             }
         }
     }
