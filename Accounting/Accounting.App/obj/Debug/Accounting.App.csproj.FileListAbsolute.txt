@@ -28,3 +28,13 @@ D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.d
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.ViewModels.pdb
 D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.Accounting.frmReport.resources
 D:\AccountingProject\Accounting\Accounting.App\obj\Debug\Accounting.App.frmLogin.resources
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Base.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.Win.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.Win.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Base.xml
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.Win.xml
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.xml
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.Win.xml
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.xml
