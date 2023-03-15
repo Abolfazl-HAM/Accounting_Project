@@ -38,3 +38,5 @@ D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.Win
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.xml
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Report.Win.xml
 D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Stimulsoft.Controls.xml
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Business.dll
+D:\AccountingProject\Accounting\Accounting.App\bin\Debug\Accounting.Business.pdb

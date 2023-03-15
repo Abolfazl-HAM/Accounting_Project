@@ -1,5 +1,7 @@
 ﻿using Accounting.App.Accounting;
+using Accounting.Business;
 using Accounting.Utility.Convertor;
+using Accounting.ViewModels.Accounting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,10 +62,20 @@ namespace Accounting.App
                 this.Show();
                 lblDate.Text = DateTime.Now.ToShamsi();
                 lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+                Report();
+
             }
             else
             {
                 Application.Exit();
+            }
+
+            void Report()
+            {
+                ReportViewModel report = Account.ReportFormMain();
+                lblRecive.Text = report.Recive.ToString("#,0");
+                lblPay.Text = report.Pay.ToString("#,0");
+                lblAccountBalamce.Text = report.AccountBalamce.ToString("#,0");
             }
         }
 

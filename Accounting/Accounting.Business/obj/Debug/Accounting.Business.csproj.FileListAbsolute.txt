@@ -4,3 +4,11 @@ D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Busines
 D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.csproj.CoreCompileInputs.cache
 D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.dll
 D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.pdb
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.DataLayer.dll
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.ViewModels.dll
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\EntityFramework.dll
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.DataLayer.pdb
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.DataLayer.dll.config
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\Accounting.ViewModels.pdb
+D:\AccountingProject\Accounting\Accounting.Business\bin\Debug\EntityFramework.xml
+D:\AccountingProject\Accounting\Accounting.Business\obj\Debug\Accounting.Business.csproj.CopyComplete
